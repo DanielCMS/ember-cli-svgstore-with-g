@@ -1,19 +1,29 @@
-# ember-cli-svgstore [![Build Status](https://travis-ci.org/salsify/ember-cli-svgstore.svg?branch=master)](https://travis-ci.org/salsify/ember-cli-svgstore)
+# ember-cli-svgstore-with-g
 
-This Ember-CLI addon uses [broccoli-svgstore](https://github.com/jmarquis/broccoli-svgstore) to combine the contents
-of individual SVG files as named symbols in one (or more) master SVGs.
+This is a last resort if you really like the idea of merging svgs into a single file in your ember application, yet the excellent addon [ember-cli-svgstore](https://www.npmjs.com/package/ember-cli-svgstore) may not serve your purpose. The major difference is that this addon allows you to use `<g>` tag in the merged svg file, instead of `<symbol>`. There are a few known issues using `<g>` over `<symbol>`, and in many cases you should try as much as possible to use `ember-cli-svgstore` first.
 
-The technique employed is outlined in [this CSS Tricks post](http://css-tricks.com/svg-sprites-use-better-icon-fonts/).
+## Why `<g>`?
+
+Although the recommended way to combine svgs together is through `<symbol>` (see for instance [this CSS Tricks post](http://css-tricks.com/svg-sprites-use-better-icon-fonts/), there is one usecase that I could not make it work: refer to svgs in CSS styles. More specifically, the following style does not work:
+```
+background-image: merged.svg#foo
+```
+
+When using `<g>`, the above CSS references work. However, there are at least two known issues:
+1. The svg fragment cannot be dynamically resized
+2. Animations do not carry over
+
+As a result, *use with caution* as it may not work as you expected.
 
 ## Installation
 
 ```
-npm install --save-dev ember-cli-svgstore
+npm install --save-dev ember-cli-svgstore-with-g
 ```
 
 ## Usage
 
-The configuration below would combine all SVGs under e.g. `app/icons` into one file `icons.svg`:
+The configuration of this addon is compatible with that for `ember-cli-svgstore`. That is, below would combine all SVGs under e.g. `app/icons` into one file `icons.svg`:
 
 ```js
 // ember-cli-build.js
