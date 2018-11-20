@@ -1,0 +1,36 @@
+{
+  "name": "ember-cli-svgstore-with-g",
+  "version": "0.1.0",
+  "description": "Ember addon to combine SVGs as symbols in a spritesheet.",
+  "repository": "git://github.com/DanielCMS/ember-cli-svgstore-with-g.git",
+  "keywords": [
+    "ember-addon",
+    "svg",
+    "svgstore"
+  ],
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "broccoli-asset-rev": "^2.2.0",
+    "ember-cli": "^2.10.0",
+    "ember-cli-babel": "^5.1.5",
+    "ember-cli-dependency-checker": "^1.2.0",
+    "ember-cli-htmlbars": "^1.0.1",
+    "ember-cli-htmlbars-inline-precompile": "^0.3.1",
+    "ember-cli-sri": "^2.0.0",
+    "ember-cli-test-loader": "^1.1.1",
+    "ember-load-initializers": "^0.6.3",
+    "ember-resolver": "^2.0.3",
+    "loader.js": "^4.0.0"
+  },
+  "dependencies": {
+    "broccoli-funnel": "^1.0.1",
+    "broccoli-merge-trees": "^1.1.1",
+    "broccoli-svgstore": "git+https://github.com/DanielCMS/broccoli-svgstore.git",
+    "broccoli-source": "^1.1.0",
+    "make-array": "^1.0.1",
+    "merge": "^1.2.0"
+  }
+}
