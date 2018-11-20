@@ -1,6 +1,6 @@
 const merge = require('merge');
 const makeArray = require('make-array');
-const SVGStore = require('broccoli-svgstore');
+const SVGStore = require('./lib/broccoli-svgstore');
 const UnwatchedDir = require('broccoli-source').UnwatchedDir;
 const Funnel = require('broccoli-funnel');
 const MergeTrees = require('broccoli-merge-trees');

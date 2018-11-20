@@ -12,10 +12,20 @@
   },
   "license": "MIT",
   "dependencies": {
+    "broccoli-caching-writer": "~3.0.3",
     "broccoli-funnel": "~2.0.1",
+    "broccoli-kitchen-sink-helpers": "~0.3.1",
     "broccoli-merge-trees": "~3.0.1",
     "broccoli-source": "~1.1.0",
+    "cheerio": "~1.0.0-rc.2",
     "make-array": "~1.0.5",
-    "merge": "~1.2.1"
+    "merge": "~1.2.1",
+    "mkdirp": "~0.5.1",
+    "object-assign": "~4.1.1"
+  },
+  "devDependencies": {
+    "broccoli": "^2.0.1",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
   }
 }
