@@ -56,18 +56,16 @@ module.exports = {
   },
 
   _makeSvgTrees(files, svgstoreOpts) {
-    return makeArray(files).map(fileSpec => (
-      new SVGStore(this._makeSourceTree(fileSpec), {
+    return makeArray(files)
+      .map(fileSpec => new SVGStore(this._makeSourceTree(fileSpec), {
         outputFile: fileSpec.outputFile,
         svgstoreOpts: svgstoreOpts
-      });
-    ));
+      }));
   },
 
   _makeSourceTree(fileSpec) {
-    let inputs = makeArray(fileSpec.sourceDirs).map(directoryPath => {
-      return new UnwatchedDir(directoryPath);
-    });
+    let inputs = makeArray(fileSpec.sourceDirs)
+      .map(directoryPath => new UnwatchedDir(directoryPath));
 
     return this._maybeMerge(inputs, 'sources: ' + fileSpec.outputFile);
   },

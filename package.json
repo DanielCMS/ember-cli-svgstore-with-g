@@ -19,7 +19,6 @@
     "broccoli-source": "~1.1.0",
     "cheerio": "~1.0.0-rc.2",
     "make-array": "~1.0.5",
-    "merge": "~1.2.1",
     "mkdirp": "~0.5.1",
     "object-assign": "~4.1.1"
   },
