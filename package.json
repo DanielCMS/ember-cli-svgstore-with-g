@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-svgstore-with-g",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "repository": "git://github.com/DanielCMS/ember-cli-svgstore-with-g.git",
   "keywords": [
     "ember-addon",
@@ -8,7 +8,7 @@
     "svgstore"
   ],
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 8.14.0"
   },
   "license": "MIT",
   "dependencies": {
